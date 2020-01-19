@@ -1,5 +1,7 @@
+package Lecture1;
+
 /**
- *  Class as a template of EmailMessage called by EmailTester
+ *  Class as a template of Lecture1.EmailMessage called by Lecture1.EmailTester
  *
  *  Created by Nonthakorn Sukprom (Mill) 60070503435,
  *  16 January 2020
@@ -17,7 +19,7 @@ public class EmailMessage
 
     /**
      * constructor method, set 'to' to String 'toAddress'
-     * @param to    String passed from EmailTester class store "to address"
+     * @param to    String passed from Lecture1.EmailTester class store "to address"
      */
     public void setToAddress(String to)
     {
@@ -26,7 +28,7 @@ public class EmailMessage
 
     /**
      * constructor method, set 'from' to String 'fromAddress'
-     * @param from    String passed from EmailTester class store "from address"
+     * @param from    String passed from Lecture1.EmailTester class store "from address"
      */
     public void setFromAddress(String from)
     {
@@ -35,7 +37,7 @@ public class EmailMessage
 
     /**
      * constructor method, set 'subject' to String 'messageSubject'
-     * @param subject    String passed from EmailTester class store "from address"
+     * @param subject    String passed from Lecture1.EmailTester class store "from address"
      */
     public void setSubject(String subject)
     {
@@ -44,7 +46,7 @@ public class EmailMessage
 
     /**
      * constructor method, add 'line' into String 'body'
-     * @param line      String passed from EmailTester class store "line of message"
+     * @param line      String passed from Lecture1.EmailTester class store "line of message"
      */
     public void addToBody(String line)
     {
@@ -82,7 +84,7 @@ public class EmailMessage
 
     /**
      * getter method, return 'to address'
-     * @return toAddress of the EmailMessage object
+     * @return toAddress of the Lecture1.EmailMessage object
      */
     public String getToAddress()
     {
@@ -91,7 +93,7 @@ public class EmailMessage
 
     /**
      * getter method, return 'from address'
-     * @return fromAddress of the EmailMessage object
+     * @return fromAddress of the Lecture1.EmailMessage object
      */
     public String getFromAddress()
     {
@@ -100,7 +102,7 @@ public class EmailMessage
 
     /**
      * getter method, return 'subject'
-     * @return messageSubject of the EmailMessage object
+     * @return messageSubject of the Lecture1.EmailMessage object
      */
     public String getSubject()
     {
@@ -109,7 +111,7 @@ public class EmailMessage
 
     /**
      * getter method, return 'body'
-     * @return body of the EmailMessage object
+     * @return body of the Lecture1.EmailMessage object
      */
     public String getBody()
     {

@@ -1,3 +1,5 @@
+package Lecture1;
+
 import java.io.*;
 import java.util.Date;
 import java.text.SimpleDateFormat;

@@ -1,5 +1,7 @@
+package Lecture1;
+
 /**
- *  Class to exercise a simple EmailMessage class
+ *  Class to exercise a simple Lecture1.EmailMessage class
  *
  *  Created by Sally E. Goldin, 26 June 2017 for CPE 372
  */
