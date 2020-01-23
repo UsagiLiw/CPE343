@@ -8,9 +8,26 @@ import java.text.SimpleDateFormat;
  *  Created by Sally Goldin, 30 April 2014, for CPE113
  *  Updated comments, 30 Dec 2019
  *  Use to simplify Java lab exercises.
+ *  Fixed bug in handline bare newline in getBareString - 18 Jan 2019
  */
 public class IOUtils
 {
+    /**
+     * Check for both Windows and Linux terminators. Remove both
+     * \r and \n
+     * @param fullString    String from the keyboard
+     * @return string without terminators
+     */
+    private static String stripTerminators(String fullString)
+    {
+       int pos = fullString.indexOf("\r");
+       if (pos < 0) // no carriage return
+           pos = fullString.indexOf("\n"); // check linefeed
+       if (pos >= 0)  // if either terminator
+	   fullString = fullString.substring(0,pos);
+           // chop off the terminator(s)
+       return fullString;
+    }
     /**
      * Asks for a string and returns it as the value of the function
      * @param   prompt    String to print, asking a question
@@ -32,9 +49,7 @@ public class IOUtils
 	   System.exit(1);
        }
        inputString = new String(buffer);
-       int pos = inputString.indexOf("\n");
-       if (pos > 0)
-	   inputString = inputString.substring(0,pos);
+       inputString = stripTerminators(inputString);
        return inputString;
     }
 
@@ -62,11 +77,9 @@ public class IOUtils
 	   System.exit(1);
        }
        inputString = new String(buffer);
+       inputString = stripTerminators(inputString);
        try 
        {
-	   int pos = inputString.indexOf("\n");
-           if (pos > 0)
-	      inputString = inputString.substring(0,pos);
            value = Integer.parseInt(inputString);
        }
        catch (NumberFormatException nfe) 
@@ -96,9 +109,7 @@ public class IOUtils
 	   System.exit(1);
        }
        inputString = new String(buffer);
-       int pos = inputString.indexOf("\n");
-       if (pos > 0)
-	   inputString = inputString.substring(0,pos);
+       inputString = stripTerminators(inputString);
        return inputString;
     }
 
